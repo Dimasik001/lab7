@@ -240,6 +240,68 @@ $var -= 15;
 echo $var;
 ?>
 ```
+......................................................................................
+CODEWARS
+
+```JavaScript
+//1
+function findAverage(array) {
+
+  let total = 0;
+  let average = 0;
+  if (array.length === 0) {
+    return 0;
+  } else {
+    for (let i = 0; i < array.length; i++) {
+      total += array[i]
+    }
+    average = total / array.length
+    return average;
+  }
+}
+
+//2
+function findEvenIndex(arr) {
+  var sum = 0,
+  leftSum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+  for (var i = 0; i < arr.length; i++) {
+    sum = sum - arr[i];
+    if (leftSum === sum) {
+      return i;
+    }
+
+    leftSum = leftSum + arr[i];
+  }
+
+  return -1;
+}
+//3
+
+function alphabetPosition(text) {
+  let sentence = text.toLowerCase().split("");
+  for (let i = sentence.length - 1; i >= 0; i--) {
+    if(sentence[i].match(/[a-z]/) === null) {
+      sentence.splice(i, 1);
+    }
+  }
+  let alphaArr = [];
+  for (let i = 0; i < 26; i++) {
+    alphaArr.push(String.fromCharCode(97 + i));
+  }
+  return sentence.map(item => alphaArr.indexOf(item) + 1).join(" ");
+}
+//4
+function breakChocolate(n,m) {
+ if(n > 0 && m > 0) {
+      return n * m - 1;
+  } else {
+    return 0;
+  }
+}
+```
   <h2 style="text-align: center">ВЫВОД</h2>
  PHP — одним из самых популярных серверных языков программирования для веб-разработки. Он используется в следующих сферах:
 
