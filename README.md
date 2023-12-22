@@ -241,8 +241,7 @@ echo $var;
 ?>
 ```
 ......................................................................................
-CODEWARS
-
+<h1>CODEWARS</h1>
 ```JavaScript
 //1
 function findAverage(array) {
