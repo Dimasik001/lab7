@@ -301,7 +301,7 @@ function breakChocolate(n,m) {
   }
 }
 ```<br>
-qr
+QR
 ```JavaScript
 const express = require('express');
 const QRCode = require('qrcode');
