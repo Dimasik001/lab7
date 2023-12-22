@@ -85,7 +85,7 @@ echo $var;
 
 
 Код на PHP
-```html
+```php
 //1 
 <?php
  $var = 'abcde';
