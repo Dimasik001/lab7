@@ -292,6 +292,42 @@ function breakChocolate(n,m) {
   }
 }
 ```
+КОДЕ
+```JavaScript
+const express = require('express');
+const QRCode = require('qrcode');
+const app = express();
+
+app.get('/generate', async (req, res) => {
+  const url = req.query.url;
+
+  if (!url) {
+    return res.status(400).send('URL не указан.');
+  }
+//QRCode.toDataURL() для генерации QR-кода на основе переданного URL. 
+try {
+  const qr = await QRCode.toDataURL(url, {
+  width: 600, 
+  height: 600, 
+  color: {
+  dark: '#081272', // Цвет  модулей QR-кода
+  light: '#ffffff' // Цвет светлых модулей QR-кода
+  },
+  margin: 10 
+  });
+  res.send(`<img src="${qr}" />`);
+  } catch (err) {
+  res.status(500).send('Ошибка при создании QR-кода.');
+  }
+  });
+app.get('/', async (req, res) => {
+    res.send("добавить  /generate?url=https://vk.com/dmitriy_andreev65")
+  });
+
+app.listen(3000, () => {
+  console.log(`Сервер запущен на порту 3000`);
+});
+```
 
   <h2 style="text-align: center">ВЫВОД</h2>
  PHP — одним из самых популярных серверных языков программирования для веб-разработки. Он используется в следующих сферах:
