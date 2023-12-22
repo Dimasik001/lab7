@@ -245,7 +245,6 @@ echo $var;
 ```JavaScript
 //1
 function findAverage(array) {
-
   let total = 0;
   let average = 0;
   if (array.length === 0) {
@@ -258,7 +257,6 @@ function findAverage(array) {
     return average;
   }
 }
-
 //2
 function findEvenIndex(arr) {
   var sum = 0,
@@ -271,14 +269,11 @@ function findEvenIndex(arr) {
     if (leftSum === sum) {
       return i;
     }
-
     leftSum = leftSum + arr[i];
   }
-
   return -1;
 }
 //3
-
 function alphabetPosition(text) {
   let sentence = text.toLowerCase().split("");
   for (let i = sentence.length - 1; i >= 0; i--) {
