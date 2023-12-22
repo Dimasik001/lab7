@@ -328,7 +328,41 @@ app.listen(3000, () => {
   console.log(`Сервер запущен на порту 3000`);
 });
 ```
+ПОЧТА
+```JavaScript
+const nodemailer = require('nodemailer');
 
+
+const smtpConfig = {
+  host: 'smtp.mail.ru',
+  port: 587,
+  secure: false, // true для SSL, false для других
+  auth: {
+    user: 'dimasandreev071@mail.ru',
+    pass: 'jH6PgYsNgQ6iYz0E3DxV',
+  },
+};
+
+//  для отправки почты
+const transporter = nodemailer.createTransport(smtpConfig);
+
+// Параметры 
+const mailOptions = {
+  from: 'dimasandreev071@mail.ru',
+  to: 'dimasandreev019@gmail.com',
+  subject: 'Enotik',
+  text: 'Poloskyn',
+ 
+};
+
+// Отправляем 
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+    return console.log('Ошибка отправки письма:', error);
+  }
+  console.log('Письмо успешно отправлено:', info.messageId);
+});
+```
   <h2 style="text-align: center">ВЫВОД</h2>
  PHP — одним из самых популярных серверных языков программирования для веб-разработки. Он используется в следующих сферах:
 
