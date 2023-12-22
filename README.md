@@ -240,8 +240,8 @@ $var -= 15;
 echo $var;
 ?>
 ```
-......................................................................................
-<h1>CODEWARS</h1>
+
+CODEWARS
 ```JavaScript
 function findAverage(array) {
   let total = 0;
