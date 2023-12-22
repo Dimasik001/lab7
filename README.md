@@ -243,7 +243,6 @@ echo $var;
 ......................................................................................
 <h1>CODEWARS</h1>
 ```JavaScript
-//1
 function findAverage(array) {
   let total = 0;
   let average = 0;
@@ -257,7 +256,6 @@ function findAverage(array) {
     return average;
   }
 }
-//2
 function findEvenIndex(arr) {
   var sum = 0,
   leftSum = 0;
@@ -273,7 +271,6 @@ function findEvenIndex(arr) {
   }
   return -1;
 }
-//3
 function alphabetPosition(text) {
   let sentence = text.toLowerCase().split("");
   for (let i = sentence.length - 1; i >= 0; i--) {
@@ -287,7 +284,6 @@ function alphabetPosition(text) {
   }
   return sentence.map(item => alphaArr.indexOf(item) + 1).join(" ");
 }
-//4
 function breakChocolate(n,m) {
  if(n > 0 && m > 0) {
       return n * m - 1;
@@ -295,7 +291,7 @@ function breakChocolate(n,m) {
     return 0;
   }
 }
-```<br>
+```
 QR
 ```JavaScript
 const express = require('express');
